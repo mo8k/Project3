@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+    </nav>
+</header>
+<section class="home">
+<h2>Home Lab Journey</h2>
+  <p> As a cybersecurity student,I am a tech enthusiast and I love to learn new things revolving the tech field.</p>
+  <p>Over the course of my last few months I have been working on various projects, my proudest one being my home lab that I have built in my dormitory.</p>
+  <p>It all started when I began simply bypassing the accessibility of my campus network. I used a router with MAC address cloning to establish a private subnet in my dormitory, which allowed me to have full control of my network traffic and routing.</p>
+  <p>I took a course last semester called Intro to OS and Networks. Throughout this course I learned about the virtualization platform called VirtualBox. This course provided the crucial foundation and understanding of Type-2 hypervisors, the logic of virtual switching, and the nuances of hardware abstraction. This enabled me to set up a virtual cyberlab to test and learn about various networking concepts like configuring a virtual firewall and routing VLANs to different virtual machines such as Kali Linux, Metasploit, and Ubuntu Server.</p>
+  <p>Running this entire stack on my primary desktop meant interference with daily use of my computer. That was when I needed dedicated compute resources. That experience sparked my interest in building my own physical home lab so that I could have a dedicated environment for testing and learning without interfering with my daily computing needs, running 24/7.</p>
+  <p>I started off by purchasing two micro-PCs: a Dell Optiplex Mini and an HP Helpdesk 800 G1. I installed Proxmox VE, allowing me to configure the nodes as a cluster with centralized management. I experimented with the 2 nodes for a while, learning about network architecture and segmentation with VLAN configuration and experimenting with a variety of services, alongside running labs like penetration testing and vulnerability assessment.</p>
+  <p>That wasn't enough for me. I eventually expanded to a three-node setup, establishing quorum using a TP-Link managed switch to segment my traffic from the router directly to nodes. I was then able to get my hands on a Dell Optiplex 980 on campus, where I installed OPNsense, transforming it into a physical firewall and router. From there I was able to move my nodes from my home network to a dedicated management VLAN through 802.1Q VLAN tagging, ensuring that management traffic and lab traffic are logically isolated. I also got my hands on a Raspberry Pi 3B+ and placed it on a dedicated VLAN. I configured AdGuard as a high-level DNS filter and Unbound as a recursive DNS resolver, eliminating reliance on third-party upstream providers like Google or Cloudflare for better privacy and security.</p>
+</section>
+ <section><h2 class="caption">Home Lab Evolution</h2>
+  <div class="image-row">
+    <div class="image-box">
+      <img src="media/started.jpg" alt="This is how my home lab started with just my router and two micro-PCs">
+      <p>This is how my home lab started</p>
+    </div>
+    <div class="image-box">
+      <img src="media/second.jpg" alt="This is how my home lab evolved with the addition of a managed switch">
+      <p>Here I added a secound node and a managed switch to create a cluster and segment my traffic</p>
+    </div>
+    <div class="image-box">
+      <img src="media/recent.jpg" alt="This is how my home lab looks like now with the addition of a physical firewall and a Raspberry Pi">
+      <p>This is my current home lab setup</p>
+    </div>
+    </div>
+    </section>
+  <section>
+    <div class="video-box">
+    <video controls autoplay muted width="600"><source src="media/lab.mp4" type="video/mp4"></video>
+    <p>Here is a video of my home lab in action</p>
+    </div>
+</section>
+</body>
+</html>
