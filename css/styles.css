@@ -148,7 +148,7 @@ h1 {
   .slide img {
     max-height: 400px;
   }
-}
+
 
 #slider-section {
   padding: 20px 14px;
@@ -207,9 +207,9 @@ h1 {
 }
 
 .slider-btn:hover { background: black }
-.prev-btn { left: 8px; }
-.next-btn { right: 8px; }
-
+.prev-btn  left: 8px; 
+.next-btn  right: 8px; 
+}
  .map {
  width: 100%;
    height: 500px;
