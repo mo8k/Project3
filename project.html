@@ -27,7 +27,6 @@
   <p>Running this entire stack on my primary desktop meant interference with daily use of my computer. That was when I needed dedicated compute resources. That experience sparked my interest in building my own physical home lab so that I could have a dedicated environment for testing and learning without interfering with my daily computing needs, running 24/7.</p>
   <p>I started off by purchasing two micro-PCs: a Dell Optiplex Mini and an HP Helpdesk 800 G1. I installed Proxmox VE, allowing me to configure the nodes as a cluster with centralized management. I experimented with the 2 nodes for a while, learning about network architecture and segmentation with VLAN configuration and experimenting with a variety of services, alongside running labs like penetration testing and vulnerability assessment.</p>
   <p>That wasn't enough for me. I eventually expanded to a three-node setup, establishing quorum using a TP-Link managed switch to segment my traffic from the router directly to nodes. I was then able to get my hands on a Dell Optiplex 980 on campus, where I installed OPNsense, transforming it into a physical firewall and router. From there I was able to move my nodes from my home network to a dedicated management VLAN through 802.1Q VLAN tagging, ensuring that management traffic and lab traffic are logically isolated. I also got my hands on a Raspberry Pi 3B+ and placed it on a dedicated VLAN. I configured AdGuard as a high-level DNS filter and Unbound as a recursive DNS resolver, eliminating reliance on third-party upstream providers like Google or Cloudflare for better privacy and security.</p>
-
 <section id="slider-section">
     <h2>Home Lab Gallery</h2>
     <div class="slider-container">
@@ -50,6 +49,5 @@
       <div class="slider-dots" id="sliderDots"></div>
     </div>
   </section>
-
 </body>
 </html>
