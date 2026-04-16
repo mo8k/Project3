@@ -110,6 +110,7 @@ h2 {
   max-width: 700px;
   border-radius:8px;
 }
+
 @mdia (min-width: 900px) {
   body {
     font-size: 18px;
@@ -129,4 +130,27 @@ h1 {
 .slide img {
   max-block-size: 
   max-height: 500px;
+}
+
+@media (min-width: 600px) {
+  .nav-menu {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 30px 24px;
+  }
+
+  .slide img {
+    max-height: 400px;
+  }
 }
