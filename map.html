@@ -21,8 +21,78 @@
       </ul>
     </nav>
   </header>
+ <section id="map-section">
+    <h1>My Chicago</h1>
+    <p>Here is an interactive map of where I grew up and where I study.</p>
+    <div id="map"></div>
+    <strong>Map Legend</strong><br>
+    <ul>
+      <li><strong>IIT:</strong> My university  where I study Cybersecurity & Information Technology.</li>
+      <li><strong>Home:</strong>Born and raised here. The South Side shaped who I am.</li>
+      <li><strong>Area:</strong>Home of The Bean and great city views.</li>
+  </section>
+  < <script>
+    function initMap() {
+      var illinoisTech = { lat: 41.8350, lng: -87.6276 };
+      var southSide    = { lat: 41.7943, lng: -87.6059 };
+      var millennium   = { lat: 41.8827, lng: -87.6233 };
 
- 
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: illinoisTech,
+        mapTypeId: "roadmap"
+      });
+      var locations = [
+        {
+          position: illinoisTech,
+          label: "IIT",
+          title: "Illinois Institute of Technology",
+          info: "<strong>Illinois Institute of Technology</strong><br>My university — where I study Cybersecurity &amp; Information Technology."
+        },
+        {
+          position: southSide,
+          label: "Home",
+          title: "South Side, Chicago",
+          info: "<strong>South Side, Chicago</strong><br>Born and raised here. The South Side shaped who I am."
+        },
+        {
+          position: millennium,
+          label: "Fav",
+          title: "Millennium Park",
+          info: "<strong>Millennium Park</strong><br>One of my favorite spots — home of The Bean and great city views."
+        }
+      ];
+      var infoWindow = new google.maps.InfoWindow(); locations.forEach(function (loc) {
+      var marker = new google.maps.Marker({
+          position: loc.position,
+          map: map,
+          label: loc.label,
+          title: loc.title
+        });
+        marker.addListener("click", function () {
+          infoWindow.setContent(loc.info);
+          infoWindow.open(map, marker);
+        });
+      });
+      new google.maps.Circle({
+        strokeColor: "#1a1a2e",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#1a73e8",
+        fillOpacity: 0.12,
+        map: map,
+        center: illinoisTech,
+        radius: 1609
+      });
+    }
+    window.initMap = initMap;
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?AIzaSyCkUOdZdGTvAl0ChU47XhKLgurTtVqV1u0&callback=initMap"
+    async defer>
+  </script>
+</body>
+</html>
 
 
 
@@ -37,6 +107,7 @@
 
 
 
-</head>
+
+
 </html>
 </body>
