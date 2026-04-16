@@ -26,28 +26,29 @@
   <p>Running this entire stack on my primary desktop meant interference with daily use of my computer. That was when I needed dedicated compute resources. That experience sparked my interest in building my own physical home lab so that I could have a dedicated environment for testing and learning without interfering with my daily computing needs, running 24/7.</p>
   <p>I started off by purchasing two micro-PCs: a Dell Optiplex Mini and an HP Helpdesk 800 G1. I installed Proxmox VE, allowing me to configure the nodes as a cluster with centralized management. I experimented with the 2 nodes for a while, learning about network architecture and segmentation with VLAN configuration and experimenting with a variety of services, alongside running labs like penetration testing and vulnerability assessment.</p>
   <p>That wasn't enough for me. I eventually expanded to a three-node setup, establishing quorum using a TP-Link managed switch to segment my traffic from the router directly to nodes. I was then able to get my hands on a Dell Optiplex 980 on campus, where I installed OPNsense, transforming it into a physical firewall and router. From there I was able to move my nodes from my home network to a dedicated management VLAN through 802.1Q VLAN tagging, ensuring that management traffic and lab traffic are logically isolated. I also got my hands on a Raspberry Pi 3B+ and placed it on a dedicated VLAN. I configured AdGuard as a high-level DNS filter and Unbound as a recursive DNS resolver, eliminating reliance on third-party upstream providers like Google or Cloudflare for better privacy and security.</p>
-</section>
- <section><h2 class="caption">Home Lab Evolution</h2>
-  <div class="image-row">
-    <div class="image-box">
-      <img src="media/started.jpg" alt="This is how my home lab started with just my router and two micro-PCs">
-      <p>This is how my home lab started</p>
+
+<section id="slider-section">
+    <h2>Home Lab Gallery</h2>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide active">
+          <img src="media/started.jpg" alt="Home lab starting setup">
+          <p class="slide-caption">How my home lab started</p>
+        </div>
+        <div class="slide">
+          <img src="media/second.jpg" alt="Home lab with managed switch">
+          <p class="slide-caption">Added a second node and managed switch</p>
+        </div>
+        <div class="slide">
+          <img src="media/recent.jpg" alt="Current home lab setup">
+          <p class="slide-caption">My current home lab setup</p>
+        </div>
+      </div>
+      <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+      <button class="slider-btn next-btn" id="nextBtn" aria-label="Next slide">&#10095;</button>
+      <div class="slider-dots" id="sliderDots"></div>
     </div>
-    <div class="image-box">
-      <img src="media/second.jpg" alt="This is how my home lab evolved with the addition of a managed switch">
-      <p>Here I added a secound node and a managed switch to create a cluster and segment my traffic</p>
-    </div>
-    <div class="image-box">
-      <img src="media/recent.jpg" alt="This is how my home lab looks like now with the addition of a physical firewall and a Raspberry Pi">
-      <p>This is my current home lab setup</p>
-    </div>
-    </div>
-    </section>
-  <section>
-    <div class="video-box">
-    <video controls autoplay muted width="600"><source src="media/lab.mp4" type="video/mp4"></video>
-    <p>Here is a video of my home lab in action</p>
-    </div>
-</section>
+  </section>
+
 </body>
 </html>

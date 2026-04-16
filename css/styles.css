@@ -154,3 +154,18 @@ h1 {
     max-height: 400px;
   }
 }
+
+#slider-section {
+  padding: 20px 14px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
