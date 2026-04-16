@@ -86,7 +86,6 @@ h2 {
 
 .image-row {
   display: flex;
-  justify-content: auto;
   gap: 20px;
   flex-wrap: wrap;
 }
