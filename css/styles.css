@@ -205,9 +205,10 @@ h1 {
   transition: background 0.2s;
 }
 
-.slider-btn:hover { background: black }
+.slider-btn:hover { 
 .prev-btn  left: 8px; 
 .next-btn  right: 8px; 
+ background: black;
 }
  .map {
  width: 100%;
