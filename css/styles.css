@@ -111,9 +111,9 @@ h2 {
   border-radius:8px;
 }
 
-@mdia (min-width: 900px) {
+@media (min-width: 900px) {
   body {
-    font-size: 18px;
+  font-size: 18px;
   }
 }
 
@@ -128,7 +128,6 @@ h1 {
 }
 
 .slide img {
-  max-block-size: 
   max-height: 500px;
 }
 
@@ -191,7 +190,7 @@ h1 {
 .slide-caption {
   position: absolute;
   background:black;
-  color: white
+  color: white;
   padding: 8px 12px;
   font-size: 0.85rem;
   margin: 0;
@@ -200,7 +199,7 @@ h1 {
 .slider-btn {
   position: absolute;
   top: 75%;
-  background: black
+  background: black;
   font-size: 1.1rem;
   cursor: pointer;
   border-radius: 4px;
